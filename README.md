@@ -1,3 +1,4 @@
-# About me
-<p>I briefly dabbled in C back in the school days and played around with image processing using OpenCV on c++ with a rather crude camera and a programmable circuit board and this basically sums up my exposure to the programming languages. I also programmed robots (specifically LEGO mindstorm) using their programming software for a good 2 years to participate in competitions held in Singapore.</p>
+# What?
+<p> In this repository you will find my solutions to the problem sets given by Harvard's CS50.<br>
+**Disclaimer: **The upload dates do not represent my actual completion dates.</p>
 

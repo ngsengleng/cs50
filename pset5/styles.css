@@ -1,0 +1,67 @@
+html, body
+{
+    background-color: lightblue;
+    height: 100%;
+}
+.column
+{
+    float: left;
+    text-align: center;
+}
+
+.row
+{
+    margin: 0;
+    text-align: center;
+}
+
+.column.nav
+{
+    width: 15%;
+    background-color: beige;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .column.nav
+    {
+        width: 100%;
+        background-color: beige;
+        height: 10%;
+    }
+    .column.main
+    {
+        width: 100%;
+    }
+}
+
+#links
+{
+    text-decoration: underline;
+    height: 20px;
+    margin: 0;
+}
+
+.column.main
+{
+    width: 85%;
+}
+
+#intro
+{
+    font-family: "Verdana", Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer
+{
+  background-color: #F1F1F1;
+  text-align: center;
+  height: 3rem;
+}
+
+#rickroll
+{
+    display: none;
+}

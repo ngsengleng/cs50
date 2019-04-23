@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"><img src="me.jpg" width="40" height="60"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="index.html">Home</a>
+              <a class="nav-item nav-link" href="anime.html">Anime</a>
+              <a class="nav-item nav-link active" href="games.html">Games</a>
+              <a class="nav-item nav-link" href="music.html">Music</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="row">
+          <div class="column nav">
+            <div class="mx-auto">
+              <nav class="nav flex-sm-column">
+                <h5 id="links">Links:</h5>
+                <div id="firstnav">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">Study</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>
+                    <a class="dropdown-item" href="https://stackoverflow.com/">Stack Overflow</a>
+                  </div>
+                </div>
+                <div id="secondnav">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">Streaming</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://www2.gogoanime.io/">Gogoanime</a>
+                    <a class="dropdown-item" href="https://www.youtube.com/">Youtube</a>
+                    <a class="dropdown-item" href="https://open.spotify.com/browse/featured">Spotify</a>
+                  </div>
+                </div>
+                <a class="nav-link" href="#">Games</a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="column main">
+            <h1>too bad if you are curious my tastes are for my eyes only</h1>
+
+            <script>
+              function rickRolld()
+              {
+                document.getElementById("rickroll").style.display = "block";
+                document.getElementById("vid2").src += "?autoplay=1";
+              }
+            </script>
+
+            <button onclick="rickRolld()">some hope?</button>
+
+            <div id="rickroll">
+              <iframe id="vid2" width="560" height="315" src="https://www.youtube.com/embed/oNVfrxkHj1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <h2>dank</h2>
+            </div>
+          </div>
+
+        </div>
+
+          <div class="footer">
+            Aperture Labatories. Where you can have your cake and eat it too... for a price.
+          </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

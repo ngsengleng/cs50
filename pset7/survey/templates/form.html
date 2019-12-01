@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Barstucks Tea</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post" class="needs-validation" novalidate>
+
+        <div class="form-group">
+            <input type="text" class="form-control" name="inputName" placeholder="Your Name Here" autocomplete="off" required>
+            <div class="valid-feedback">
+                Thanks!
+            </div>
+            <div class="invalid-feedback">
+                Name please!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <select class="custom-select food" name="drinks"required>
+                <option value="">Choose your drink</option>
+                <option value="Caramel Milk Tea">Caramel milk Tea</option>
+                <option value="Black Tea">Black Tea</option>
+                <option value="Teappucino">Teappucino</option>
+                <option value="Teacchiato">Teacchiato</option>
+            </select>
+            <div class="invalid-feedback">
+                Drink please!
+            </div>
+            <div class="valid-feedback">
+                Coming up!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="radio"><label>Choose your drink size</label><br>
+                <label><input type="radio" name="size" value="small" checked>smol</label>
+                <label><input type="radio" name="size" value="normal">normal</label>
+                <label><input type="radio" name="size" value="large">massive</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <select class="custom-select food" name="sides" required>
+                <option value="">Choose your side</option>
+                <option value="Apple Pie">Apple pie</option>
+                <option value="Tiramisu">Tiramisu</option>
+                <option value="Cheesecake">Cheesecake</option>
+                <option value="None">None</option>
+            </select>
+            <div class="invalid-feedback">
+                 If no, choose none!
+            </div>
+            <div class="valid-feedback">
+                Coming up!
+            </div>
+        </div>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+
+{% endblock %}

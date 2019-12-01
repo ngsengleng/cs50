@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in userInfo %}
+                <tr>
+                    <td>{{ row["symbol"] }}</td>
+                    <td>{{ row["SUM(share)"] }}</td>
+                    <td>${{ row["price"] }}</td>
+                    <td>${{ "%.2f"|format(row["price"] * row["SUM(share)"]) }}</td>
+                </tr>
+            {% endfor %}
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Networth: ${{ "%.2f"|format(totalHold) }}</th>
+                    <th scope="col">Balance: ${{ "%.2f"|format(balance[0]["cash"]) }}</th>
+                </tr>
+            </thead>
+        </tbody>
+    </table>
+{% endblock %}

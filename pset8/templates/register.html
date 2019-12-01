@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form id="form" action="/register" method="post" onsubmit="return validateForm()">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" id="username" name="username" placeholder="Username" type="text" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" id="password" placeholder="Password"  type="password" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" id="confirmation" placeholder="Re-type password" type="password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var x = document.getElementById("password").value;
+            var y = document.getElementById("confirmation").value;
+            if (x != y) {
+                alert("Passwords do not match!");
+                return false;
+            }
+        }
+
+        var formz = document.getElementById("form");
+        formz.addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            $.get("/check?username=" + username, function(data){
+                if (data == true) {
+                formz.submit()
+                }
+
+                else {
+                alert("invalid username")
+                }
+                });
+            });
+    </script>
+{% endblock %}
